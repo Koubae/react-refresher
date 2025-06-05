@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+h4 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+h5 {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+h6 {
+    margin-top: 0;
+    font-size: 12px;
+}
+
+code {
+    font-size: 1.2em;
+}
+
+ul {
+    padding-inline-start: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.screen {
+    background-color: #171616;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed; /* or absolute depending on your needs */
+    top: 0;
+    left: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider-value {
+    font-size: 20px;
+    color: #ffff;
+}
+
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: #72ffa7;
+    border-radius: 50%;
+    animation: fadeGlow .8s ease-in infinite, shrink 1500ms ease-in-out forwards;
+    box-shadow: 0 0 30px #72ffa7;
+    filter: brightness(1.2);
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    left: 0px;
+    right: 0px;
+
+}
+
+@keyframes fadeGlow {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 30px #72ffa7;
+        filter: brightness(1.2);
+    }
+    50% {
+        opacity: 1; /* More fade */
+        box-shadow: 0 0 70px #72ffa7, 0 0 100px #72ffa7; /* Double glow effect */
+        filter: brightness(1.5); /* Increased brightness at peak */
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 30px #72ffa7;
+        filter: brightness(1.2);
+    }
+}
+
+
+@keyframes shrink {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
